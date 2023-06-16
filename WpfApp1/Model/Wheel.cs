@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -49,8 +50,12 @@ namespace WpfApp1.Model
         }
 
         public void Turn(double InputAngle)
-        {
+        {   
+       
+
             Angle = InputAngle / 12;
+
+
         }
 
         public void Recover (double Speed)

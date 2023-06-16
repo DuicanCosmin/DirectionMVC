@@ -21,9 +21,22 @@ namespace WpfApp1.Model
                 {
                     if (value >= MinSteeringAngle && value <= MaxSteeringAngle)
                     {
+                       
                         _steeringAngle = value;
                         RaisePropertyChanged(nameof(SteeringAngle));
+                     
                     }
+                    else if (value < MinSteeringAngle)
+                    {
+                        _steeringAngle = MinSteeringAngle;
+                        RaisePropertyChanged(nameof(SteeringAngle));
+                    }
+                    else
+                    {
+                        _steeringAngle = MaxSteeringAngle;
+                        RaisePropertyChanged(nameof(SteeringAngle));
+                    }
+
 
                 }
             }
@@ -32,7 +45,9 @@ namespace WpfApp1.Model
 		}
 
         public void Turn(int Value)
-        {
+        {   
+
+
             SteeringAngle += Value*14; // 14 is the tick angle value. calculated at 1 and a half revolutions in 2 seconds.
 
 

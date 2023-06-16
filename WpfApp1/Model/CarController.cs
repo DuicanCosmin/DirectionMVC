@@ -50,6 +50,8 @@ namespace WpfApp1.Model
         public void Turn(int input)
         {
 
+
+
             SteeringWheel.Turn(input);
 
             LeftWheel.Turn(SteeringWheel.SteeringAngle);

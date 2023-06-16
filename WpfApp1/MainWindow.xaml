@@ -25,14 +25,17 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="0" Background="Gray">
-                <Rectangle  Fill="Black" Width="30" Height="100">
-                    <Rectangle.RenderTransform>
+            <Grid Grid.Column="0" Background="White">
+                <Image Source="https://cdn-icons-png.flaticon.com/512/7723/7723822.png" Margin="20" RenderTransformOrigin="0.5,0.5" >
+                    <Image.RenderTransform >
 
-                        <RotateTransform CenterX="15" CenterY="50" Angle="{Binding LeftWheel.Angle}" />
+                        <RotateTransform Angle="{Binding LeftWheel.Angle}"/>
 
-                    </Rectangle.RenderTransform>
-                </Rectangle>
+
+                    </Image.RenderTransform>
+
+                </Image>
+
             </Grid>
 
             <Grid Grid.Column="1" Background="Black">
@@ -43,7 +46,7 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Background="White">
-                    <Image Source="https://cdn-icons-png.flaticon.com/512/1723/1723597.png" Margin="20" RenderTransformOrigin="0.5,0.5" >
+                    <Image Source="https://cdn-icons-png.flaticon.com/512/7509/7509918.png" Margin="20" RenderTransformOrigin="0.5,0.5" >
                         <Image.RenderTransform >
 
                             <RotateTransform Angle="{Binding SteeringWheel.SteeringAngle}"/>
@@ -66,19 +69,27 @@
                         </Rectangle.RenderTransform>
                     </Rectangle>
                 </Grid>
-                
-               
+
+
                 
             </Grid>
 
-            <Grid Grid.Column="2" Background="Gray">
-                <Rectangle  Fill="Black" Width="30" Height="100">
-                    <Rectangle.RenderTransform>
+            <Grid Grid.Column="2" Background="White">
 
-                        <RotateTransform CenterX="15" CenterY="50" Angle="{Binding RightWheel.Angle}" />
+                <Image Source="https://cdn-icons-png.flaticon.com/512/7723/7723822.png" Margin="20" RenderTransformOrigin="0.5,0.5" >
+                    <Image.RenderTransform >
 
-                    </Rectangle.RenderTransform>
-                </Rectangle>
+                        <RotateTransform Angle="{Binding RightWheel.Angle}"/>
+
+
+                    </Image.RenderTransform>
+
+                </Image>
+
+
+
+
+          
             </Grid>
 
 
