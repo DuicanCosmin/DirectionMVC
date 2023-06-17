@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
-using WpfApp1.Model;
+using WpfApp1.Controllers;
 
 namespace WpfApp1
 {
@@ -28,53 +28,11 @@ namespace WpfApp1
         {
             InitializeComponent();
 
-            Start();
+            ContextCar.Start();
 
-
-
-            this.DataContext = ContextCar;
+            this.DataContext = ContextCar.Car;
         }
 
-        private DispatcherTimer timer = new DispatcherTimer();
 
-
-
-        public void Start()
-        {
-            timer.Interval = TimeSpan.FromMilliseconds(1);
-            timer.Tick += Update;
-            timer.Start();
-        }
-
-  
-
-        public async void Update(object sender, EventArgs e)
-        {   
-
-            
-
-            if (Keyboard.IsKeyDown(Key.A) || Keyboard.IsKeyDown(Key.Left))
-            {
-                ContextCar.Turn(-1);
-            }
-            else if (Keyboard.IsKeyDown(Key.D) || Keyboard.IsKeyDown(Key.Right))
-            {
-                ContextCar.Turn(1);
-            }
-            else
-            {
-                ContextCar.Recover();
-            }
-            
-            if (Keyboard.IsKeyDown(Key.W) || Keyboard.IsKeyDown(Key.Up))
-            {
-                ContextCar.ChangeSpeed(1);
-            }
-            if (Keyboard.IsKeyDown(Key.S) || Keyboard.IsKeyDown(Key.Down))
-            {
-                ContextCar.ChangeSpeed(-1);
-            }
-
-        }
     }
 }

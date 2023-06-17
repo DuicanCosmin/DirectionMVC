@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:viewmodels="clr-namespace:WpfApp1.Model" 
-        d:DataContext="{d:DesignInstance Type=viewmodels:CarController}"
+        d:DataContext="{d:DesignInstance Type=viewmodels:Car}"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     
@@ -58,11 +58,11 @@
                 </Grid>
                 
                 <Grid Grid.Row="1" Background="DarkGray" >
-                    <Rectangle  Fill="{Binding SpeedometerColor}" Width="200" Height="25" >
+                    <Rectangle  Fill="{Binding Speedometer.SpeedometerColor}" Width="200" Height="25" >
                         
                         <Rectangle.RenderTransform>
 
-                            <ScaleTransform ScaleX="{Binding SpeedometerScale}"/>
+                            <ScaleTransform ScaleX="{Binding Speedometer.SpeedometerScale}"/>
 
 
 
